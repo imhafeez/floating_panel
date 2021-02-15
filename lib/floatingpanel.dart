@@ -26,11 +26,11 @@ class FloatBoxPanel extends StatefulWidget {
   final double dockOffset;
   final int dockAnimDuration;
   final Curve dockAnimCurve;
-  final List<IconData> buttons;
+  final List<Widget> widgets;
   final Function(int) onPressed;
 
   FloatBoxPanel(
-      {this.buttons,
+      {this.widgets,
       this.positionTop,
       this.positionLeft,
       this.borderColor,
@@ -90,7 +90,7 @@ class _FloatBoxState extends State<FloatBoxPanel> {
     double _pageHeight = MediaQuery.of(context).size.height;
 
     // All Buttons;
-    List<IconData> _buttons = widget.buttons;
+    List<Widget> _buttons = widget.widgets;
 
     // Dock offset creates the boundary for the page depending on the DockType;
     double _dockOffset = widget.dockOffset ?? 20.0;
@@ -129,10 +129,10 @@ class _FloatBoxState extends State<FloatBoxPanel> {
 
     // Total buttons are required to calculate the height of the panel;
     double _totalButtons() {
-      if (widget.buttons == null) {
+      if (widget.widgets == null) {
         return 0;
       } else {
-        return widget.buttons.length.toDouble();
+        return widget.widgets.length.toDouble();
       }
     }
 

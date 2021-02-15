@@ -15,11 +15,11 @@ class Homepage extends StatelessWidget {
               panelShape: PanelShape.rectangle,
               borderRadius: BorderRadius.circular(8.0),
 
-              buttons: [
+              widgets: [
                 // Add Icons to the buttons list.
-                Icons.message,
-                Icons.photo_camera,
-                Icons.video_library
+                Icon(Icons.message),
+                Icon(Icons.photo_camera),
+                Icon(Icons.video_library)
               ],
             ),
           ],

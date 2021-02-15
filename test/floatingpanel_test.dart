@@ -5,10 +5,10 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('test', () {
     final floatingPanel = FloatBoxPanel(
-      buttons: [
-        Icons.message,
-        Icons.photo_camera,
-        Icons.video_library
+      widgets: [
+        Icon(Icons.message),
+        Icon(Icons.photo_camera),
+        Icon(Icons.video_library)
       ],
     );
   });
