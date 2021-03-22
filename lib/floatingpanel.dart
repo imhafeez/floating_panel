@@ -319,12 +319,13 @@ class _FloatBoxState extends State<FloatBoxPanel> {
                       onTap: () {
                         widget.onPressed(index);
                       },
-                      child: _FloatButton(
-                        size: widget.size ?? 70.0,
-                        icon: _buttons[index] ?? Icons.add,
-                        color: widget.contentColor ?? Colors.white,
-                        iconSize: widget.iconSize ?? 24.0,
-                      ),
+                      child:_buttons[index]
+                      //  _FloatButton(
+                      //   size: widget.size ?? 70.0,
+                      //   icon: _buttons[index] ?? Icons.add,
+                      //   color: widget.contentColor ?? Colors.white,
+                      //   iconSize: widget.iconSize ?? 24.0,
+                      // ),
                     );
                   }),
                 ),
